@@ -1,6 +1,12 @@
 # 브랜치명 검증
 branch_name=$(git symbolic-ref --short HEAD)
 
+# main, master 브랜치는 예외 처리 (메인 브랜치)
+if [[ $branch_name == "main" || $branch_name == "master" ]]; then
+  echo "✅ 메인 브랜치: $branch_name"
+  exit 0
+fi
+
 # 브랜치명 규칙: feature/, fix/, hotfix/, chore/, docs/, refactor/, test/ 접두사 사용
 if [[ ! $branch_name =~ ^(feature|fix|hotfix|chore|docs|refactor|test)/.+ ]]; then
   echo "❌ 브랜치명이 규칙을 따르지 않습니다."
