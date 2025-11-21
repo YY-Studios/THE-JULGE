@@ -24,5 +24,20 @@ module.exports = {
     'subject-empty': [2, 'never'],
     'subject-full-stop': [2, 'never', '.'],
     'header-max-length': [2, 'always', 100],
+    // 이슈 번호 검증 규칙 추가
+    'issue-reference-required': [2, 'always'],
   },
+  plugins: [
+    {
+      rules: {
+        'issue-reference-required': ({ raw }) => {
+          // #123 형식의 이슈 번호를 찾습니다
+          const issuePattern = /#\d+/;
+          const hasIssue = issuePattern.test(raw);
+
+          return [hasIssue, '커밋 메시지에 이슈 번호(#123)를 포함해야 합니다.'];
+        },
+      },
+    },
+  ],
 };
