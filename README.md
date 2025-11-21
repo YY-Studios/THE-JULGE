@@ -114,8 +114,8 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
    git push origin wrong-branch-name
 
    # 올바른 브랜치명으로 push 시도 (성공해야 함)
-   git checkout -b feature/test-branch
-   git push origin feature/test-branch
+   git checkout -b feat/#123-additem-route
+   git push origin feat/#123-additem-route
    ```
 
    - 잘못된 형식의 브랜치명은 push가 거부됩니다
@@ -166,13 +166,17 @@ docs: README 업데이트
 refactor: API 호출 로직 개선
 ```
 
-커밋 시 자동으로 커밋 메시지 형식이 검증됩니다.
-
 ### 브랜치명 규칙
 
-브랜치명은 다음 접두사를 사용해야 합니다:
+브랜치명은 다음 형식을 따라야 합니다:
 
-- `feature/` - 새로운 기능 개발
+```
+<type>/#<issue-number>-<kebab-case-description>
+```
+
+허용되는 `<type>`:
+
+- `feat/` - 새로운 기능 개발
 - `fix/` - 버그 수정
 - `hotfix/` - 긴급 버그 수정
 - `chore/` - 빌드/설정 관련 작업
@@ -183,13 +187,13 @@ refactor: API 호출 로직 개선
 **예시:**
 
 ```bash
-feature/user-authentication
-fix/login-error
-hotfix/security-patch
-chore/update-dependencies
+feat/#123-additem-route
+fix/#210-price-parse-bug
+refactor/#98-split-product-components
+chore/#5-update-ci
 ```
 
-브랜치를 push할 때 자동으로 브랜치명이 검증됩니다.
+브랜치를 push할 때 자동으로 브랜치명이 검증되며, `main`/`master` 브랜치는 예외로 허용됩니다.
 
 ### 설정 파일
 
