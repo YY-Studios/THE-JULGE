@@ -1,10 +1,9 @@
 ---
 name: Docs
 about: 문서 작업과 관련된 이슈
-title: "[DOCS]"
+title: '[DOCS]'
 labels: documentation
 assignees: ''
-
 ---
 
 ## 📖 변경할 문서

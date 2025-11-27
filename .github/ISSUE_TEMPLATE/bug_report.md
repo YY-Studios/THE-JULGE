@@ -1,10 +1,9 @@
 ---
 name: Bug report
 about: 버그를 보고할 때 사용하세요
-title: "[BUG]"
+title: '[BUG]'
 labels: fix
 assignees: ''
-
 ---
 
 ## 🐞 버그 설명
