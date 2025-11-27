@@ -1,10 +1,9 @@
 ---
 name: Design / UI
 about: 디자인 및 UI/UX 개선 관련 이슈
-title: "[DESIGN]"
+title: '[DESIGN]'
 labels: style
 assignees: ''
-
 ---
 
 ## 🎨 개선 대상

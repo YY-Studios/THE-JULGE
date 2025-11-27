@@ -1,10 +1,9 @@
 ---
 name: Chore / Task
 about: 환경설정, 리팩토링, 테스트, 빌드 관련 작업
-title: "[CHORE]"
+title: '[CHORE]'
 labels: chore
 assignees: ''
-
 ---
 
 ## 🛠 작업 설명
