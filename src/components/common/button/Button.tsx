@@ -20,11 +20,13 @@ interface ButtonAsButton
     ComponentPropsWithoutRef<'button'> {
   as?: 'button';
   href?: never;
+  type?: 'button' | 'submit';
 }
 
 interface ButtonAsLink extends BaseButtonProps, ComponentPropsWithoutRef<'a'> {
   as?: 'link';
   href: string;
+  type?: never;
 }
 
 type ButtonProps = ButtonAsButton | ButtonAsLink;
@@ -35,6 +37,7 @@ const Button = ({
   size = 'md',
   className,
   as = 'button',
+  type = 'button',
   ...props
 }: ButtonProps) => {
   const buttonClassName = clsx(
@@ -52,9 +55,12 @@ const Button = ({
       </Link>
     );
   }
-
   return (
-    <button className={buttonClassName} {...(props as ButtonAsButton)}>
+    <button
+      className={buttonClassName}
+      type={type}
+      {...(props as ButtonAsButton)}
+    >
       {children}
     </button>
   );
