@@ -1,3 +1,4 @@
+'use client';
 import axios, { AxiosError } from 'axios';
 
 export const clientApi = axios.create({
@@ -24,8 +25,11 @@ clientApi.interceptors.response.use(
   },
   (error: AxiosError) => {
     if (error.response?.status === 401) {
-      if (!window.location.pathname.includes('/login')) {
-        window.location.href = '/login';
+      if (typeof window !== 'undefined') {
+        const { pathname } = window.location;
+        if (!pathname.startsWith('/login')) {
+          window.location.href = '/login';
+        }
       }
     }
     return Promise.reject(error);
