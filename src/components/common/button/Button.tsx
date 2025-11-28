@@ -59,7 +59,7 @@ const Button = ({
     <button
       className={buttonClassName}
       type={type}
-      disabled={variant === 'disabled' ? true : false}
+      disabled={variant === 'disabled'}
       {...(props as ButtonAsButton)}
     >
       {children}
