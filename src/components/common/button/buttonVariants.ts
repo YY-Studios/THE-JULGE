@@ -29,20 +29,20 @@ export type ButtonVariant = keyof typeof BUTTON_VARIANTS;
 // "sm" | "md" | "lg" | "full"
 export const BUTTON_SIZES = {
   sm: `
-    w-[82px] h-8 px-3
-    text-[12px] font-[500]
+    min-w-[82px] h-8 px-3
+    text-xs font-medium
   `,
   md: `
-    w-[108px] h-9 px-4
-    text-[14px] font-[500]
+    min-w-[108px] h-9 px-4
+    text-sm font-medium
   `,
   lg: `
-    w-[350px] h-12 px-5
-    text-[16px] font-[500]
+    min-w-[350px] h-12 px-5
+    text-base font-medium
   `,
   full: `
-    w-full h-12 px-5
-    text-[16px] font-[500]
+    min-w-full h-12 px-5
+    text-base font-medium
   `,
 } as const;
 
