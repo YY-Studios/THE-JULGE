@@ -1,5 +1,5 @@
-const Layout = () => {
-  return <div>Layout</div>;
+const Layout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
+  return <div>{children}</div>;
 };
 
 export default Layout;
