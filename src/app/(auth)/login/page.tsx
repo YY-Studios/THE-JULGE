@@ -1,5 +1,19 @@
+import Button from '@/components/common/button/Button';
+
 const Page = () => {
-  return <div>login</div>;
+  return (
+    <>
+      <Button variant="primary" size="md" as="button" type="button">
+        버튼
+      </Button>
+      <Button variant="disabled" size="md" as="button" type="button">
+        버튼
+      </Button>
+      <Button variant="outline" size="sm" href="/signup" as="link">
+        링크
+      </Button>
+    </>
+  );
 };
 
 export default Page;
