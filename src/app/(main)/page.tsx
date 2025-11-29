@@ -1,5 +1,5 @@
 import TextLogo from '@/assets/ico-20x-16.svg';
-
+import Input from '@/components/common/input/Input';
 const Page = () => {
   return (
     <>
@@ -19,6 +19,8 @@ const Page = () => {
       <h2 className="font-bold">안녕하세요 text-body2</h2>
 
       <h2 className=" text-primary font-h1">안녕하세요 text-caption</h2>
+      <Input suffix="원" label="이메일" error="test" />
+      <Input type="password" />
     </>
   );
 };
