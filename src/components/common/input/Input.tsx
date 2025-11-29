@@ -13,6 +13,7 @@ const Input = ({
   className,
   id,
   type = 'text',
+  placeholder,
   ...props
 }: InputProps) => {
   return (
@@ -32,7 +33,7 @@ const Input = ({
         <input
           type={type}
           id={id}
-          placeholder="Enter text here"
+          placeholder={placeholder}
           className="w-full outline-none"
           {...props}
         />
