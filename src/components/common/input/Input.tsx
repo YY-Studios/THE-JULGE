@@ -17,9 +17,11 @@ const Input = ({
 }: InputProps) => {
   return (
     <div className="block">
-      <label htmlFor={id} className="text-sm font-medium">
-        {label}
-      </label>
+      {label && (
+        <label htmlFor={id} className="text-sm font-medium">
+          {label}
+        </label>
+      )}
       <div
         className={clsx(
           'flex items-center bg-white border rounded-lg px-4 h-14',
